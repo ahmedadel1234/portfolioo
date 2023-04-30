@@ -48,7 +48,7 @@ body {
   width: 45px;
   height: 45px;
   background-color: var(--maincolor);
-  border-radius: 10%;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +58,7 @@ body {
 
 .side div::before {
   width: 60px;
-  height: 43px;
+  height: 35px;
   position: absolute;
   right: -500px;
   top: 50%;
@@ -101,7 +101,7 @@ body {
 }
 
 .side div:hover:before {
-  right: 40px;
+  right: 50px;
 }
 /* ----endsidebar---- */
 
