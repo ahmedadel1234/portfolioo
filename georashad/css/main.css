@@ -47,7 +47,7 @@ body {
 .box-t h2 {
     font-size: 45px;
     position: relative;
-    z-index: 9999;
+    z-index: 999;
     margin-bottom: 20px;
 }
 
