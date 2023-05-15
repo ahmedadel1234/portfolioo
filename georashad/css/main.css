@@ -349,7 +349,7 @@ body {
     font-weight: 500;
     position: relative;
     background-color: #ff7300;
-    padding: 4px 10px;
+    padding: 4px 5px;
     color: white;
 }
 
@@ -428,6 +428,7 @@ body {
 
     .geo-r p {
         margin-top: -20px;
+	    font-size:15px;
     }
     
 
