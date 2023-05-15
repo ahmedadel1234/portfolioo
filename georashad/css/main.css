@@ -437,6 +437,14 @@ body {
     }
 }
 
+@media (max-width:1000px) {
+
+    .icon {
+        display: none;
+    }
+}
+
+
 
 footer {
     text-align: center;
