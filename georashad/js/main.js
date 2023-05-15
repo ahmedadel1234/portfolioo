@@ -12,6 +12,8 @@
         } else {
             document.querySelector(
             "#loader").style.display = "none";
+             document.querySelector(
+            "body").style.height = "100%";
             document.querySelector(
                 "body").style.overflowY = "scroll";
             document.querySelector(
