@@ -388,6 +388,7 @@ body {
 .geo-r {
     padding: 10px 0px;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .geo-r h2 {
@@ -408,14 +409,14 @@ body {
 
 .icon {
     position: absolute;
-    left: -20px;
+    left: 0px;
     width: 120px;
     transform: rotate(21deg);
     z-index: 0;
 }
 
 .ic-l {
-    right: -10px;
+    right: 5px;
     bottom: 0px;
 }
 
@@ -455,6 +456,19 @@ footer a {
     text-decoration: none;
     font-weight: bold;
     color: white;
+}
+
+footer .qoute p {
+    max-width: 380px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+footer .rights {
+    border-top: 2px solid #ffffff4f;
+    width: 100%;
+    padding: 8px 0px 0px;
 }
 
 #loader {
