@@ -26,93 +26,70 @@ body {
   margin-left: auto;
 }
 
-/* ----startsidebar---- */
-.side {
-  position: fixed;
-  right: 0%;
-  top: 50%;
-  width: 60px;
-  height: 280px;
-  z-index: 1000;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  color: white;
-}
-
-.side div {
-  width: 45px;
-  height: 45px;
-  background-color: var(--maincolor);
-  border-radius: 50%;
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  transition: all 0.4s;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+  margin-top: 10px;
 }
 
-.side div::before {
-  width: 60px;
-  height: 35px;
-  position: absolute;
-  right: -500px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: white;
-  color: #006264;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: all 0.3s;
-  border: 1px solid var(--maincolor);
-  padding: 0px 5px;
-  z-index: -1;
+.nav div {
+  margin: 5px;
 }
 
-.side a {
-  color: white;
-  padding: 10px;
+.nav a {
   text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
-.side .ho::before {
-  content: "Home";
+.nav a:hover {
+  color: #006264;
 }
-.side .sk::before {
-  content: "Skills";
-}
-.side .pj::before {
-  content: "Projects";
-  width: 70px;
-}
-.side .ab::before {
-  content: "About";
-}
-.side .co::before {
-  content: "Contact";
-  width: 70px;
-}
-
-.side div:hover:before {
-  right: 50px;
-}
-/* ----endsidebar---- */
 
 /* ----startmain---- */
+.contactusbtn {
+  background-color: #f6f6f6;
+  width: 110px;
+  height: 40px;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -5px;
+  right: 10px;
+  padding-top: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  animation: scalebtn 2s infinite linear;
+}
+
+@keyframes scalebtn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contactusbtn a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #144477;
+}
 section {
   height: 100vh;
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  position: relative;
+  flex-direction: column;
   overflow: hidden;
   /* clip-path: polygon(0% 0%, 0% 100%, 100% 88%, 100% 0%); */
   background-image: url(/assets/Gradient-Background-Best-Wallpaper-16349.jpg);
@@ -122,6 +99,7 @@ section .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 70px);
   flex-wrap: wrap;
 }
 
@@ -681,4 +659,79 @@ footer a:hover {
   to {
     transform: rotate3d(1, 1, 1, 360deg);
   }
+}
+
+.contactuspg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.contactuspg .close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  z-index: 10000;
+  color: red;
+  cursor: pointer;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border: 3px solid red;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.contactshow {
+  display: flex !important;
+}
+
+.contactuspg div {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.contactuspg div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.contactuspg div:first-child a {
+  background-color: #135fab;
+}
+.contactuspg div:nth-child(2) a {
+  background-color: #338b36;
+}
+.contactuspg div:nth-child(3) a {
+  background-color: #db3428;
+}
+.contactuspg div:last-child a {
+  background-color: #f6f6f6;
+}
+
+.contactuspg a img {
+  width: 128px;
+  height: 128px;
+  transition: 0.3s;
+}
+
+.contactuspg a img:hover {
+  transform: scale(1.2) rotate(10deg);
 }
